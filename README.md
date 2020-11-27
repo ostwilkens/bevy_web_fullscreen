@@ -11,6 +11,9 @@ rev = "01ba7c44255059f833c2b90d3d6b7ac7e9c025ca"
 default-features = false
 ```
 
+### usage
+`.add_plugin(FullViewportPlugin)`
+
 ### recommended css
 ```css
 body {
