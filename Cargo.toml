@@ -1,0 +1,16 @@
+[package]
+name = "bevy_web_fullscreen"
+version = "0.1.0"
+authors = ["ostwilkens <carl@ostwilkens.se>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gloo-events = "0.1.1"
+web-sys = { version = "0.3.45", features = ["Element", "Document", "Window"] }
+
+[dependencies.bevy]
+git = "https://github.com/bevyengine/bevy"
+rev = "01ba7c44255059f833c2b90d3d6b7ac7e9c025ca"
+default-features = false
