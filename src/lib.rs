@@ -14,17 +14,18 @@ impl Plugin for FullViewportPlugin {
 }
 
 fn get_viewport_size() -> (u32, u32) {
-    let document_element = web_sys::window()
-        .expect("could not get window")
+    let window = web_sys::window().expect("could not get window");
+    let document_element = window
         .document()
         .expect("could not get document")
         .document_element()
         .expect("could not get document element");
 
-    let width = document_element.client_width() as u32;
-    let height = document_element.client_height() as u32;
+    let width = document_element.client_width() as f64;
+    let height = document_element.client_height() as f64;
+    let scale = window.device_pixel_ratio();
 
-    (width, height)
+    ((width * scale) as u32, (height * scale) as u32)
 }
 
 pub struct ViewportResized {

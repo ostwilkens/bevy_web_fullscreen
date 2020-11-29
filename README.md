@@ -14,16 +14,17 @@ default-features = false
 ### usage
 `.add_plugin(FullViewportPlugin)`
 
-### recommended css
+### recommended html/css
+```html
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+```
+
 ```css
 body {
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
+    display: flex;
 }
 canvas {
-    width: 100% !important;
-    height: 100% !important;
     touch-action: none;
 }
 ```
