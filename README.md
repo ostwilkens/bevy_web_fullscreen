@@ -7,7 +7,7 @@ currently requires specific git version of bevy:
 ```toml
 [dependencies.bevy]
 git = "https://github.com/bevyengine/bevy"
-rev = "01ba7c44255059f833c2b90d3d6b7ac7e9c025ca"
+rev = "1398d7833007e85198cfd35d5fabc70b51b4db31"
 default-features = false
 ```
 
