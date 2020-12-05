@@ -62,7 +62,10 @@ fn viewport_resize_system(
 ) {
     for event in viewport_resized_event_reader.iter(&viewport_resized_events) {
         if let Some(window) = windows.get_primary_mut() {
-            window.set_resolution(event.width, event.height);
+            window.set_resolution(
+                (event.width as f64 / window.scale_factor()) as u32,
+                (event.height as f64 / window.scale_factor()) as u32,
+            );
         }
     }
 }
