@@ -21,11 +21,10 @@ fn get_viewport_size() -> (u32, u32) {
         .document_element()
         .expect("could not get document element");
 
-    let width = document_element.client_width() as f64;
-    let height = document_element.client_height() as f64;
-    let scale = window.device_pixel_ratio();
+    let width = document_element.client_width();
+    let height = document_element.client_height();
 
-    ((width * scale) as u32, (height * scale) as u32)
+    (width as u32, height as u32)
 }
 
 pub struct ViewportResized {
