@@ -18,8 +18,8 @@ impl Plugin for FullViewportPlugin {
         let resize_sender: OnResizeSender = channel.0;
         let resize_receiver: OnResizeReceiver = channel.1;
 
-        app.add_resource(Mutex::new(resize_sender))
-            .add_resource(Mutex::new(resize_receiver))
+        app.insert_resource(Mutex::new(resize_sender))
+            .insert_resource(Mutex::new(resize_receiver))
             .add_startup_system(setup_viewport_resize_system.system())
             .add_system(viewport_resize_system.system());
     }
