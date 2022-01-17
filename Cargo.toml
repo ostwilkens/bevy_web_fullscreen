@@ -1,16 +1,16 @@
 [package]
+authors = ["ostwilkens <carl@ostwilkens.se>"]
+edition = "2021"
 name = "bevy_web_fullscreen"
 version = "0.2.0"
-authors = ["ostwilkens <carl@ostwilkens.se>"]
-edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+futures = "0.3.19"
 gloo-events = "0.1.1"
-web-sys = { version = "0.3.45", features = ["Element", "Document", "Window"] }
-futures = "0.3"
+web-sys = {version = "0.3.55", features = ["Element", "Document", "Window"]}
 
 [dependencies.bevy]
-version = "0.5.0"
 default-features = false
+version = "0.6.0"
