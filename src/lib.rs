@@ -1,5 +1,5 @@
 use bevy::{
-    prelude::{AppBuilder, IntoSystem, Plugin, Res, ResMut},
+    prelude::{App, IntoSystem, Plugin, Res, ResMut},
     window::Windows,
 };
 use std::sync::{
@@ -13,7 +13,7 @@ type OnResizeReceiver = Receiver<()>;
 pub struct FullViewportPlugin;
 
 impl Plugin for FullViewportPlugin {
-    fn build(&self, app: &mut AppBuilder) {
+    fn build(&self, app: &mut App) {
         let channel = std::sync::mpsc::channel();
         let resize_sender: OnResizeSender = channel.0;
         let resize_receiver: OnResizeReceiver = channel.1;
