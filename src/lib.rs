@@ -1,5 +1,5 @@
 use bevy::{
-    prelude::{App, IntoSystem, Plugin, Res, ResMut},
+    prelude::{App, Plugin, Res, ResMut},
     window::Windows,
 };
 use std::sync::{
@@ -20,8 +20,8 @@ impl Plugin for FullViewportPlugin {
 
         app.insert_resource(Mutex::new(resize_sender))
             .insert_resource(Mutex::new(resize_receiver))
-            .add_startup_system(setup_viewport_resize_system.system())
-            .add_system(viewport_resize_system.system());
+            .add_startup_system(setup_viewport_resize_system)
+            .add_system(viewport_resize_system);
     }
 }
 

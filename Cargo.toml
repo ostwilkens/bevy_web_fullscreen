@@ -7,10 +7,10 @@ version = "0.2.1"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-futures = "0.3.19"
-gloo-events = "0.1.1"
-web-sys = {version = "0.3.55", features = ["Element", "Document", "Window"]}
+futures = "0.3.21"
+gloo-events = "0.1.2"
+web-sys = { version = "0.3.57", features = ["Element", "Document", "Window"] }
 
 [dependencies.bevy]
 default-features = false
-version = "0.6.0"
+version = "0.7.0"
