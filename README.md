@@ -21,3 +21,11 @@ canvas {
     touch-action: none;
 }
 ```
+
+### Conditional compilation
+Make use of this cfg in order to have your code only include the plugin when targeting wasm.
+
+```rust
+#[cfg(target_family = "wasm")]
+app.add_plugin(FullViewportPlugin);
+```
