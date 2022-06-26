@@ -13,6 +13,4 @@ web-sys = { version = "0.3.57", features = ["Element", "Document", "Window"] }
 
 [dependencies.bevy]
 default-features = false
-version = "0.7.0"
-# git = "https://github.com/bevyengine/bevy"
-# rev = "8b27124a801d83a1e92f1136ebd2bc9752c3e9d7"
+version = "0.8.0-dev"
