@@ -3,6 +3,9 @@ authors = ["ostwilkens <carl@ostwilkens.se>"]
 edition = "2021"
 name = "bevy_web_fullscreen"
 version = "0.2.1"
+license-file = "LICENSE"
+license = "MIT"
+description = "Bevy plugin for automatic resizing of primary bevy window to fit browser viewport"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
