@@ -1,6 +1,6 @@
 use bevy::{
-    prelude::{App, Plugin, Res, ResMut, Resource},
-    window::Windows,
+    prelude::*,
+    window::{PrimaryWindow, WindowResolution},
 };
 use std::sync::{
     mpsc::{Receiver, Sender},
@@ -54,13 +54,14 @@ fn setup_viewport_resize_system(resize_sender: Res<OnResizeSender>) {
 }
 
 fn viewport_resize_system(
-    mut windows: ResMut<Windows>,
+    mut window: Query<&mut Window, With<PrimaryWindow>>,
     resize_receiver: Res<OnResizeReceiver>,
 ) {
     if resize_receiver.0.lock().unwrap().try_recv().is_ok() {
-        if let Some(window) = windows.get_primary_mut() {
+        if let Ok(mut primary) = window.get_single_mut() {
             let size = get_viewport_size();
-            window.set_resolution(size.0, size.1);
+            let windowres = WindowResolution::new(size.0, size.1);
+            primary.resolution = windowres;
         }
     }
 }
