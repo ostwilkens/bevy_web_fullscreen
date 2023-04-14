@@ -1,3 +1,5 @@
+# ⚠️ this plugin is deprecated, as bevy now has this built-in. see [link](https://github.com/ostwilkens/bevy_web_fullscreen/pull/9#issuecomment-1472676869)
+
 # bevy_web_fullscreen
 plugin for automatic resizing of primary bevy window to fit browser viewport
 
